@@ -1,0 +1,16 @@
+﻿<Window x:Class="Ashes_Wind___Launcher.info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ashes_Wind___Launcher"
+        mc:Ignorable="d"
+        Title="info" Height="500" Width="889" WindowStyle="none" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="AW фон1.png"/>
+        </Grid.Background>
+        <Button Content="Закрыть" HorizontalAlignment="Left" Margin="729,421,0,0" VerticalAlignment="Top" Width="122" Height="32" Background="{x:Null}" Foreground="White" FontFamily="Bebas Neue" FontSize="18"/>
+
+    </Grid>
+</Window>
