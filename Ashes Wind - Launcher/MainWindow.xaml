@@ -5,16 +5,99 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ashes_Wind___Launcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="889" WindowStyle="none" ResizeMode="NoResize">
-    <Grid OverridesDefaultStyle="True" Background="Black">
-        <Image x:Name="Logo" HorizontalAlignment="Left" Height="302" VerticalAlignment="Top" Width="125" Source="AW.png" Stretch="UniformToFill" Tag="Logo" Margin="387,112,0,0"/>
-        <Label Content="ASHES WIND" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Copperplate Gothic Light" FontSize="36" Foreground="White" Margin="320,18,0,0"/>
-        <Label Content="TES3mp project" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Copperplate Gothic Light" FontSize="18" Foreground="White" Width="172" Margin="366,73,0,0"/>
-        <Button Content="Войти в игру" Margin="740,262,36,0" VerticalAlignment="Top" Width="113" FontFamily="Bebas Neue" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_1" MouseMove="Button_MouseMove"  />
-        <Button Content="Настройки" Margin="737,294,24,0" VerticalAlignment="Top" FontFamily="Bebas Neue" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0"  />
-        <Button Content="Скачать обновления" Margin="684,328,27,0" VerticalAlignment="Top" FontFamily="Bebas Neue" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_3"  />
-        <Button Content="О проекте" Margin="743,363,18,0" VerticalAlignment="Top" FontFamily="Bebas Neue" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_2"  />
-        <Button Content="Выход" Margin="761,396,16,0" VerticalAlignment="Top" FontFamily="Bebas Neue" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click"  />
+        Title="MainWindow" Height="500" Width="889" WindowStyle="none" ResizeMode="NoResize" Icon="logo.ico" Background="{x:Null}" Foreground="{x:Null}" WindowStartupLocation="Manual">
+    <Grid OverridesDefaultStyle="True" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="880*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="AW фон1.png"/>
+        </Grid.Background>
+        <Label Content="ASHES WIND" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Copperplate" FontSize="45" Foreground="White" Margin="293,18,0,0"/>
+        <Label Content="TES3mp project" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Copperplate" FontSize="20" Foreground="White" Width="172" Margin="359,73,0,0"/>
+        <Button x:Name="btn1" Content="Войти в игру" Margin="759,262,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_1" MouseMove="Button_MouseMove" HorizontalAlignment="Left" Width="79" FontWeight="Bold"  />
+        <Button x:Name="openmw" Content="Настройка (OpenMW)" Margin="0,284,760,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="openmw_Click" MouseLeave="openmw_MouseLeave" MouseMove="openmw_MouseMove" HorizontalAlignment="Right" Width="110" FontWeight="Bold"  />
+        <Button x:Name="btn3" Content="Скачать обновления" Margin="711,320,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_3" HorizontalAlignment="Left" Width="127" FontWeight="Bold"  />
+        <Button x:Name="btn4" Content="О проекте" Margin="780,349,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_2" HorizontalAlignment="Left" Width="58" FontWeight="Bold"  />
+        <Button x:Name="btn5" Content="Выход" Margin="797,378,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click" HorizontalAlignment="Left" FontWeight="Bold"  />
+        <Image x:Name="Logo" Height="306" Margin="341,123,0,71" VerticalAlignment="Center" Width="207" Source="AW_logo.png" HorizontalAlignment="Left" Uid="Logo">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="AW_logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="135" Margin="10,123,0,0" TextWrapping="Wrap" Text="Ashes Wind - Сервер на базе проекта TES3mp, нацеленный на РП-составляющую. Открытый мир, большой функционал для отыгрыша. Покупка домов, животных - компаньонов, гибкая настройка декорирования собственного жилища. частые обновления, приносящие новый контент, Переработанный Вварденфелл, сделанный по официальному арт-буку от Bethesda Softworks." VerticalAlignment="Top" Width="472" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" TextOptions.TextFormattingMode="Display" IsReadOnly="True" IsUndoEnabled="False" FontWeight="Bold"/>
+        <TextBox x:Name="text2" HorizontalAlignment="Left" Height="24" Margin="11,436,0,0" TextWrapping="Wrap" Text="Поддержкой сервера и помощью в разработке контента занимается команда Civitatum Team." VerticalAlignment="Top" Width="577" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" TextOptions.TextFormattingMode="Display" IsUndoEnabled="False" IsReadOnly="True" FontWeight="Bold"/>
+        <Image x:Name="CT" HorizontalAlignment="Center" Height="128" Margin="751,10,1,0" Width="128" Source="CT.png" VerticalAlignment="Top" MouseDown="CT_MouseDown"/>
+        <Image x:Name="vk_ct" HorizontalAlignment="Left" Height="40" Margin="682,420,0,0" VerticalAlignment="Top" Width="40" Source="vk.png" MouseDown="vk_ct_MouseDown"/>
+        <Image x:Name="fb" HorizontalAlignment="Left" Height="40" Margin="722,420,0,0" VerticalAlignment="Top" Width="39" Source="fb.png" MouseDown="fb_MouseDown"/>
+        <Image x:Name="tw" HorizontalAlignment="Left" Height="40" Margin="761,420,0,0" VerticalAlignment="Top" Width="40" Source="tw.png" MouseDown="tw_MouseDown"/>
+        <Image x:Name="yt" HorizontalAlignment="Left" Height="40" Margin="801,420,0,0" VerticalAlignment="Top" Width="39" Source="yt.png" MouseDown="yt_MouseDown"/>
+        <Image x:Name="_in" HorizontalAlignment="Left" Height="40" Margin="840,420,0,0" VerticalAlignment="Top" Width="40" Source="in.png" MouseDown="_in_MouseDown"/>
+        <Image x:Name="vk_aw" HorizontalAlignment="Left" Height="40" Margin="10,262,0,0" VerticalAlignment="Top" Width="40" Source="vk.png" MouseDown="vk_aw_MouseDown"/>
+        <Button x:Name="back" Content="Назад" Margin="797,465,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="back_Click" HorizontalAlignment="Left" Width="41" FontWeight="Bold" />
+        <Label x:Name="tosite" Content="На сайт" HorizontalAlignment="Left" Margin="791,143,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" TextOptions.TextFormattingMode="Display" FontWeight="Bold"/>
+        <Label x:Name="feedback" Content="Остались вопросы - нажмите здесь, чтобы связаться с нами" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" TextOptions.TextFormattingMode="Display" Margin="11,471,0,0" MouseDown="feedback_MouseDown" FontWeight="Bold"/>
+        <Button x:Name="graph_low" Content="Graphics - Low" HorizontalAlignment="Right" Margin="0,134,790,0" VerticalAlignment="Top" Width="79" Height="29" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" MouseLeave="graph_low_MouseLeave" MouseMove="graph_low_MouseMove" Click="graph_low_Click" FontWeight="Bold"/>
+        <Button x:Name="graph_med" Content="Graphics - Medium" HorizontalAlignment="Right" Margin="0,168,776,0" VerticalAlignment="Top" Width="94" Height="29" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" MouseLeave="graph_med_MouseLeave" MouseMove="graph_med_MouseMove" Click="graph_med_Click" FontWeight="Bold"/>
+        <Button x:Name="graph_high" Content="Graphics - High" HorizontalAlignment="Right" Margin="0,202,790,0" VerticalAlignment="Top" Width="80" Height="29" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" MouseLeave="graph_high_MouseLeave" MouseMove="graph_high_MouseMove" Click="graph_high_Click" FontWeight="Bold"/>
+        <Button x:Name="graph_ultra" Content="Graphics - Ultra" HorizontalAlignment="Right" Margin="0,236,781,0" VerticalAlignment="Top" Width="88" Height="29" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="16" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" MouseLeave="graph_ultra_MouseLeave" MouseMove="graph_ultra_MouseMove" Click="graph_ultra_Click" FontWeight="Bold"/>
+        <Image x:Name="arrow_1" HorizontalAlignment="Left" Height="42" Margin="139,128,0,0" VerticalAlignment="Top" Width="20" Source="arrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="arrow_2" HorizontalAlignment="Left" Height="42" Margin="139,162,0,0" VerticalAlignment="Top" Width="20" Source="arrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="arrow_3" HorizontalAlignment="Left" Height="42" Margin="139,196,0,0" VerticalAlignment="Top" Width="20" Source="arrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="arrow_4" HorizontalAlignment="Left" Height="42" Margin="139,230,0,0" VerticalAlignment="Top" Width="20" Source="arrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="arrow_5" HorizontalAlignment="Left" Height="42" Margin="138,274,0,0" VerticalAlignment="Top" Width="20" Source="arrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button x:Name="btn2" Content="Настройка" Margin="768,291,0,0" VerticalAlignment="Top" FontFamily="/Ashes Wind - Launcher;component/System/IO/Compression/#Bebas Neue Light" FontSize="18" Background="{x:Null}" Foreground="White" BorderThickness="0" Click="Button_Click_4" MouseMove="Button_MouseMove" HorizontalAlignment="Left" Width="70" FontWeight="Bold"  />
+        <ProgressBar x:Name="progress" HorizontalAlignment="Left" Height="306" Margin="341,123,0,0" VerticalAlignment="Top" Width="207" RenderTransformOrigin="0.5,0.5" Foreground="#FF00FFB9" Orientation="Vertical" BorderBrush="#FF00FFB9" Background="{x:Null}" Value="20">
+            <ProgressBar.OpacityMask>
+                <ImageBrush ImageSource="AW_logo.png"/>
+            </ProgressBar.OpacityMask>
+        </ProgressBar>
 
     </Grid>
 

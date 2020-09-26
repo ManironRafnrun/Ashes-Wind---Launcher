@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Ashes Wind - Launcher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Civitatum Team")]
 [assembly: AssemblyProduct("Ashes Wind - Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © Civitatum Team 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
